@@ -3,15 +3,13 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:background="#00000000"
-    android:orientation="vertical" >
+    android:orientation="vertical" android:id="@+id/tooltip_root">
 
      <ImageView
          android:id="@+id/tooltip_pointer_up"
          android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:src="@drawable/tooltip_arrow_up" />
-
- 	 
+         android:layout_height="7dp"
+         android:src="@drawable/tooltip_arrow_up" android:contentDescription="TODO" android:layout_marginLeft="5dp"/>
 
  	 <FrameLayout
  	     android:id="@+id/tooltip_contentholder"
@@ -19,14 +17,16 @@
  	     android:layout_height="wrap_content"
  	     android:layout_alignParentLeft="true"
  	     android:layout_below="@+id/tooltip_pointer_up"
- 	     android:background="#ffffff"
- 	     android:paddingLeft="8dp"
- 	     android:paddingRight="8dp"
+ 	     android:background="@drawable/background_shape"
+ 	     android:paddingBottom="3dp"
+ 	     android:paddingLeft="3dp"
+ 	     android:paddingRight="3dp"
+ 	     android:paddingTop="3dp"
  	     android:scrollbars="none" >
 
  	     <TextView
  	         android:id="@+id/tooltip_contenttv"
- 	         android:layout_width="107dp"
+ 	         android:layout_width="wrap_content"
  	         android:layout_height="wrap_content"
  	         android:text="afdfa dafkd;fkjd; fkajkldafjlkdfjkdsl f aaaaaaaa" />
  	 </FrameLayout>
@@ -34,7 +34,7 @@
 <ImageView
  	     android:id="@+id/tooltip_pointer_down"
  	     android:layout_width="wrap_content"
- 	     android:layout_height="wrap_content" 	    
+ 	     android:layout_height="7dp" 	    
  	      android:layout_below="@id/tooltip_contentholder"
- 	     android:src="@drawable/tooltip_arrow_down" />
+ 	     android:src="@drawable/tooltip_arrow_down" android:layout_marginLeft="5dp" />
 </RelativeLayout>

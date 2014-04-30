@@ -4,5 +4,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.helppopup.MainActivity"
-    tools:ignore="MergeRootFrame" />
+    tools:ignore="MergeRootFrame" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <Button
+            android:id="@+id/testId2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="112dp"
+            android:layout_marginTop="191dp" />
+
+        <TextView
+            android:id="@+id/testId1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/testId2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="96dp"
+            android:text="TextView" />
+    </RelativeLayout>
+
+</FrameLayout>
 

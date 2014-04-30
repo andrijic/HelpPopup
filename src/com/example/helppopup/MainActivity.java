@@ -4,6 +4,7 @@ import hr.andrijic.uslugehr.helppopup.HelpPopup;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -15,6 +16,7 @@ import android.os.Build;
 public class MainActivity extends ActionBarActivity {
 
 	HelpPopup popup ;
+	HelpPopup popup2 ;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +32,18 @@ public class MainActivity extends ActionBarActivity {
 			
 			@Override
 			public void run() {
-				popup = new HelpPopup(MainActivity.this, findViewById(R.id.container), 100, 100);
+				popup = new HelpPopup(MainActivity.this, findViewById(R.id.container))
+					.setText("ovo je tekst 1\n nova linij")
+					.setColor(Color.BLUE)
+					.setTextColor(Color.RED)
+					.setPosition(100, 100);
+				
+				popup2 = new HelpPopup(MainActivity.this, findViewById(R.id.container))
+				.setText("ovo je tekst 2\n nova linij")
+				.setColor(Color.BLUE)
+				.setTextColor(Color.RED)
+				.setPosition(100, 300)
+				.upArrowIsVisible(false);
 			}
 		});
 	}
